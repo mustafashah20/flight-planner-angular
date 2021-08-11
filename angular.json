@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "flight-planner-angular"
+  "defaultProject": "flight-planner-angular",
+  "cli": {
+    "analytics": false
+  }
 }
