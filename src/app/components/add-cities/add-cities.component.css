@@ -1,9 +1,9 @@
 .my-card {
     height: 80vh !important;
-    margin-bottom: 0px !important;
+    overflow: hidden;
 }
 
-.my-list-group {
-    max-height: 57vh !important;
+.wrapper {
+    height: 60%;
     overflow-y: auto;
 }
