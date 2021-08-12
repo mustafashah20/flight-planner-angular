@@ -1,0 +1,34 @@
+<div class="card my-card">
+    <div class="card-body m-5">
+        <div class="row align-items-center">
+            <div class="col-1">
+                <h5 class="card-title">Name:</h5>
+            </div>
+            <div class="col-10">
+                <div>
+                    <input type="text" name="cityInput" [(ngModel)]="cityInput" class="form-control"
+                        id="formControlCity" placeholder="City Name">
+                </div>
+            </div>
+            <div class="col-1">
+                <button class="btn btn-primary" (click)="onClickAddCity()">Add</button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <h5>List of Cities</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul class="list-group list-group my-list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let city of cities">
+                        {{city.name}}
+                        <fa-icon [ngStyle]="{'color': 'red'}" [icon]="faTrash" (click)="onClickDeleteCity(city._id)"></fa-icon>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

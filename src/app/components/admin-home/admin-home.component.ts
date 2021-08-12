@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-home.component.css']
 })
 export class AdminHomeComponent implements OnInit {
-
+  temp: String = "this is working"
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.temp)
   }
 
 }
