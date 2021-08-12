@@ -1,1 +1,48 @@
-<p>add-flights works!</p>
+<div class="card overflow-auto mb-5">
+    <div class="card-body m-5 mb-2">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <h5 class="card-title">Origin:</h5>
+            </div>
+            <div class="col-10 ms-auto">
+                <div>
+                    <select class="form-select" name="flightOrigin" [(ngModel)]="flightOrigin"
+                        aria-label="Default select example">
+                        <option hidden>Select City</option>
+                        <option *ngFor="let city of cities">{{city.name}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center mt-3">
+            <div class="col-auto">
+                <h5 class="card-title">Destination:</h5>
+            </div>
+            <div class="col-10 ms-auto">
+                <div>
+                    <select class="form-select" name="flightDestination" [(ngModel)]="flightDestination"
+                        aria-label="Default select example">
+                        <option hidden >Select City</option>
+                        <option *ngFor="let city of cities">{{city.name}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center mt-3">
+            <div class="col-auto">
+                <h5 class="card-title">Cost:</h5>
+            </div>
+            <div class="col-10 ms-auto">
+                <div>
+                    <input type="number" name="flightCost" [(ngModel)]="flightCost" class="form-control"
+                        id="formControlFlightCost" placeholder="5000">
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center mt-3">
+            <div class="col-3">
+                <button class="btn btn-primary" (click)="onClickAddFlight()">Add Flight Schedule</button>
+            </div>
+        </div>
+    </div>
+</div>

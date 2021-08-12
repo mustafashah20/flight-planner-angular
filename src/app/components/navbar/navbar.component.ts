@@ -17,13 +17,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickCities() {
-    this.citiesActive = true;
-    this.flightsActive = false;
-  }
-
-  onClickFlights() {
-    this.citiesActive = false;
-    this.flightsActive = true;
+  onClickLogout(){
+    this.router.navigate([''])
   }
 }
