@@ -10,6 +10,7 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddCitiesComponent } from './components/add-cities/add-cities.component';
 import { AddFlightsComponent } from './components/add-flights/add-flights.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AddFlightsComponent } from './components/add-flights/add-flights.compon
     AdminHomeComponent,
     NavbarComponent,
     AddCitiesComponent,
-    AddFlightsComponent
+    AddFlightsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
