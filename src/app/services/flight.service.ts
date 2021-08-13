@@ -32,4 +32,14 @@ export class FlightService {
     const url = `${this.rootUrl}/flights/${id}`;
     return this.http.delete<Flight>(url);
   }
+
+  getFlightPlan(origin: string, destination: string): Observable<Flight[]> {
+    const data = {
+      origin: origin,
+      destination: destination
+    }
+    const url = `${this.rootUrl}/flights/plan?data=${encodeURIComponent(JSON.stringify(data))}`;
+    return this.http.get<Flight[]>(url);
+  }
+
 }

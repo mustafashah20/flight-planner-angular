@@ -7,14 +7,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  role: string;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onLogin() {
-    this.router.navigate(['/admin-home']);
+    if(this.role === "admin"){
+      this.router.navigate(['/admin-home']);
+    }
+    else{
+      this.router.navigate(['/traveler-home']);
+    }
   }
 
 }

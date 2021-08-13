@@ -1,6 +1,13 @@
 <app-navbar></app-navbar>
 <div class="container">
     <div class="row justify-content-center align-items-center mt-5">
+        <div class="col-4">
+            <h1>
+                <strong>Admin Dashboard</strong>
+            </h1>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center mt-5">
         <div class="col">
             <app-add-cities *ngIf="hasRoute('/admin-home/cities')"></app-add-cities>
             <app-add-flights *ngIf="hasRoute('/admin-home/flights')"></app-add-flights>

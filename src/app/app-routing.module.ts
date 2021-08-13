@@ -1,3 +1,4 @@
+import { TravelerHomeComponent } from './components/traveler-home/traveler-home.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddFlightsComponent } from './components/add-flights/add-flights.component';
 import { AddCitiesComponent } from './components/add-cities/add-cities.component';
@@ -24,7 +25,9 @@ const routes: Routes = [
         component: AddFlightsComponent
       },
     ]
-  }
+  },
+  { path: 'traveler-home', component: TravelerHomeComponent },
+
 ];
 
 @NgModule({

@@ -11,6 +11,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddCitiesComponent } from './components/add-cities/add-cities.component';
 import { AddFlightsComponent } from './components/add-flights/add-flights.component';
 import { LoginComponent } from './components/login/login.component';
+import { TravelerHomeComponent } from './components/traveler-home/traveler-home.component';
+import { FlightPlanComponent } from './components/flight-plan/flight-plan.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { LoginComponent } from './components/login/login.component';
     NavbarComponent,
     AddCitiesComponent,
     AddFlightsComponent,
-    LoginComponent
+    LoginComponent,
+    TravelerHomeComponent,
+    FlightPlanComponent
   ],
   imports: [
     BrowserModule,

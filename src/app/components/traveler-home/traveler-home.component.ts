@@ -3,13 +3,12 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-traveler-home',
+  templateUrl: './traveler-home.component.html',
+  styleUrls: ['./traveler-home.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class TravelerHomeComponent implements OnInit {
   faPaperPlane = faPaperPlane;
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -18,4 +17,5 @@ export class NavbarComponent implements OnInit {
   onClickLogout(){
     this.router.navigate([''])
   }
+
 }
