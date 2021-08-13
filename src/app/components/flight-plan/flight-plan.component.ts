@@ -16,7 +16,7 @@ export class FlightPlanComponent implements OnInit {
   flightPlan: Flight[];
   totalCost: any = 0;
   showTable: Boolean = false;
-  showPlaceholder: Boolean = true;
+  showMessage: Boolean = true;
   message: String;
 
   constructor(private cityService: CityService, private flightService: FlightService) { }
@@ -57,12 +57,12 @@ export class FlightPlanComponent implements OnInit {
         })
 
         this.showTable = true;
-        this.showPlaceholder = false;
+        this.showMessage = false;
       }
-      else{
+      else {
         this.message = "No Flights Found!"
         this.showTable = false;
-        this.showPlaceholder = true;
+        this.showMessage = true;
       }
 
     })
