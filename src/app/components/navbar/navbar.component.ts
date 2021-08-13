@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
@@ -10,12 +11,13 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   faPaperPlane = faPaperPlane;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  onClickLogout(){
+  onClickLogout() {
+    this.auth.signOut();
     this.router.navigate([''])
   }
 }

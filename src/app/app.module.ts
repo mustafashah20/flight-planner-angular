@@ -4,6 +4,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppComponent } from './app.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
@@ -13,6 +17,16 @@ import { AddFlightsComponent } from './components/add-flights/add-flights.compon
 import { LoginComponent } from './components/login/login.component';
 import { TravelerHomeComponent } from './components/traveler-home/traveler-home.component';
 import { FlightPlanComponent } from './components/flight-plan/flight-plan.component';
+import { SignupComponent } from './components/signup/signup.component';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDYk7jj_XjWgkBZ6FSq3EuV9EiaQxBLMIA",
+  authDomain: "flightplanner-1e6a4.firebaseapp.com",
+  projectId: "flightplanner-1e6a4",
+  storageBucket: "flightplanner-1e6a4.appspot.com",
+  messagingSenderId: "237648352796",
+  appId: "1:237648352796:web:e3c984e993fb0caa27f1d9"
+};
 
 @NgModule({
   declarations: [
@@ -23,7 +37,8 @@ import { FlightPlanComponent } from './components/flight-plan/flight-plan.compon
     AddFlightsComponent,
     LoginComponent,
     TravelerHomeComponent,
-    FlightPlanComponent
+    FlightPlanComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +46,10 @@ import { FlightPlanComponent } from './components/flight-plan/flight-plan.compon
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireStorageModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
