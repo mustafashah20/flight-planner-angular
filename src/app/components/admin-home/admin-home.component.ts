@@ -6,11 +6,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-home.component.css']
 })
 export class AdminHomeComponent implements OnInit {
-  temp: String = "this is working"
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.temp)
   }
 
   hasRoute(route: string) {

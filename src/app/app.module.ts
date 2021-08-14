@@ -8,6 +8,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { MatDialogModule } from '@angular/material/dialog'
 
 import { AppComponent } from './app.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
@@ -18,6 +19,8 @@ import { LoginComponent } from './components/login/login.component';
 import { TravelerHomeComponent } from './components/traveler-home/traveler-home.component';
 import { FlightPlanComponent } from './components/flight-plan/flight-plan.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopupEditFlightComponent } from './components/popup-edit-flight/popup-edit-flight.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDYk7jj_XjWgkBZ6FSq3EuV9EiaQxBLMIA",
@@ -38,7 +41,8 @@ const firebaseConfig = {
     LoginComponent,
     TravelerHomeComponent,
     FlightPlanComponent,
-    SignupComponent
+    SignupComponent,
+    PopupEditFlightComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ const firebaseConfig = {
     AngularFireAuthModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireStorageModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

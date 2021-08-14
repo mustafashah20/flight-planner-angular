@@ -23,9 +23,19 @@ export class FlightService {
     return this.http.get<Flight[]>(url);
   }
 
+  getFlightById(id: string): Observable<Flight> {
+    const url = `${this.rootUrl}/flights/${id}`;
+    return this.http.get<Flight>(url);
+  }
+
   addFlight(flight: Flight): Observable<Flight> {
     const url = `${this.rootUrl}/flights/create`;
     return this.http.post<Flight>(url, flight, httpOptions);
+  }
+
+  updateFlight(id: string, flight: Flight): Observable<Flight> {
+    const url = `${this.rootUrl}/flights/${id}`;
+    return this.http.patch<Flight>(url, flight, httpOptions);
   }
 
   deleteFlight(id: string): Observable<Flight> {
@@ -34,11 +44,7 @@ export class FlightService {
   }
 
   getFlightPlan(origin: string, destination: string): Observable<Flight[]> {
-    const data = {
-      origin: origin,
-      destination: destination
-    }
-    const url = `${this.rootUrl}/flights/plan?data=${encodeURIComponent(JSON.stringify(data))}`;
+    const url = `${this.rootUrl}/flights/plan/${origin}/${destination}`;
     return this.http.get<Flight[]>(url);
   }
 

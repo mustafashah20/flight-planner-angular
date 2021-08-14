@@ -22,7 +22,7 @@
                 <div>
                     <select class="form-select" name="flightDestination" [(ngModel)]="flightDestination"
                         aria-label="Default select example">
-                        <option hidden >Select City</option>
+                        <option hidden>Select City</option>
                         <option *ngFor="let city of cities">{{city.name}}</option>
                     </select>
                 </div>
@@ -42,6 +42,43 @@
         <div class="row d-flex justify-content-center align-items-center mt-3">
             <div class="col-3">
                 <button class="btn btn-primary" (click)="onClickAddFlight()">Add Flight Schedule</button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <h5>List of Flights</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="table-wrapper">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">From</th>
+                                <th scope="col">To</th>
+                                <th scope="col">Cost</th>
+                                <th scope="col" class="custom-width-cell-heading">Edit</th>
+                                <th scope="col" class="custom-width-cell-heading">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let flight of flights">
+                                <td>{{flight.origin}}</td>
+                                <td>{{flight.destination}}</td>
+                                <td>{{flight.cost}} PKR</td>
+                                <td class="custom-width-cell">
+                                    <fa-icon [ngStyle]="{'color': 'blue'}" [icon]="faEdit"
+                                        (click)="onClickUpdateFlight(flight._id)"></fa-icon>
+                                </td>
+                                <td class="custom-width-cell">
+                                    <fa-icon [ngStyle]="{'color': 'red'}" [icon]="faTrash"
+                                        (click)="onClickDeleteFlight(flight._id)"></fa-icon>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
