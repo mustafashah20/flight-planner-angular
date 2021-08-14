@@ -1,14 +1,17 @@
 .my-link{
     text-decoration: none;
 }
+
+.outer-wrapper{
+    height: 100vh;
+    width: 100%;
+    padding: 5%;
+}
+
 .outer{
-    position: absolute;
     background-color: #FFB1A4;
-    height: 700px;
-    width: 1200px;
-    left: 50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -23,6 +26,23 @@
     border-bottom-right-radius: 20px;
 }
 
-.svg-image{
-    height: 300px;
+img{
+    max-height: 100%;
+    max-width: 85%
+}
+
+.col-wrapper{
+    margin: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.custom{
+    flex-grow: 1;
+}
+
+.my-button {
+    background: #FF725E !important;
+    border: none !important;
 }
