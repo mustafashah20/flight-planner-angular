@@ -1,35 +1,48 @@
 <div class="container">
-    <div class="row justify-content-center mt-5">
-        <div class="col-auto">
-            <h1>
-                <strong>Login</strong>
-            </h1>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col">
-            <form (ngSubmit)="onClickLogin()">
-                <div class="mb-3">
-                    <label for="InputEmail" class="form-label">Email address</label>
-                    <input type="email" name="email" [(ngModel)]="email" class="form-control" id="InputEmail"
-                        aria-describedby="emailHelp" autocomplete="current-email">
+    <div class="outer">
+        <div class="row w-100 h-100 m-0">
+            <div class="col-5 inner-left d-flex align-items-center ">
+                <div class="wrapper w-100 p-5 justify-content-center d-flex">
+                    <img class="svg-image" src="../../../assets/images/journey.svg" alt="temp-svg">
                 </div>
-                <div class="mb-3">
-                    <label for="InputPassword" class="form-label">Password</label>
-                    <input type="password" name="password" [(ngModel)]="password" class="form-control"
-                        id="InputPassword" autocomplete="current-password">
-                </div>
-                <div class="row justify-content-center align-items-center mb-3">
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            <div class="col-7 inner-right d-flex align-items-center">
+                <div class="wrapper w-100 p-5">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <h1>
+                                <strong>Login</strong>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <form (ngSubmit)="onClickLogin()">
+                                <div class="mb-3">
+                                    <label for="InputEmail" class="form-label">Email address</label>
+                                    <input type="email" name="email" [(ngModel)]="email" class="form-control"
+                                        id="InputEmail" aria-describedby="emailHelp" autocomplete="current-email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="InputPassword" class="form-label">Password</label>
+                                    <input type="password" name="password" [(ngModel)]="password" class="form-control"
+                                        id="InputPassword" autocomplete="current-password">
+                                </div>
+                                <div class="row justify-content-center align-items-center mb-3">
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-auto">
+                                        Need an account? <a routerLink="signup" class="my-link">Sign Up Here</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-auto">
-                        Need an account? <a routerLink="signup" class="my-link">Sign Up Here</a>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
