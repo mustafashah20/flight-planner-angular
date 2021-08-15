@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+    <div class="container">
         <a class="navbar-brand" routerLinkActive="router-link-active">
-            <fa-icon class="me-1" [icon]="faPaperPlane" [ngStyle]="{'color': 'red'}"></fa-icon>
+            <fa-icon class="me-1 my-brand-icon" [icon]="faPaperPlane"></fa-icon>
             Flight Planner
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -9,16 +9,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+            <ul class="navbar-nav me-3 mb-2 mb-lg-0 ms-auto">
+                <li class="nav-item me-3">
                     <a class="nav-link" routerLinkActive="active" routerLink="cities">Cities</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-3">
                     <a class="nav-link" routerLinkActive="active" routerLink="flights">Flights</a>
                 </li>
             </ul>
             <form class="d-flex">
-                <button class="btn btn-danger btn-sm" (click)="onClickLogout()" type="submit">Logout</button>
+                <button class="btn btn-sm my-btn" (click)="onClickLogout()" type="submit">
+                    <fa-icon class="me-1 logout-icon" [icon]="faSignOutAlt"></fa-icon> 
+                    Logout
+                </button>
             </form>
         </div>
     </div>

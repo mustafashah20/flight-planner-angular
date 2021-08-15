@@ -1,10 +1,10 @@
-<div class="card mb-5">
+<div class="card overflow-auto mb-3">
     <div class="card-body m-5 mb-2">
         <div class="row align-items-center">
             <div class="col-auto">
                 <h5 class="card-title">Origin:</h5>
             </div>
-            <div class="col-10 ms-auto">
+            <div class="col ms-auto">
                 <div>
                     <select class="form-select" name="flightOrigin" [(ngModel)]="flightOrigin"
                         aria-label="Default select example">
@@ -18,7 +18,7 @@
             <div class="col-auto">
                 <h5 class="card-title">Destination:</h5>
             </div>
-            <div class="col-10 ms-auto">
+            <div class="col ms-auto">
                 <div>
                     <select class="form-select" name="flightDestination" [(ngModel)]="flightDestination"
                         aria-label="Default select example">
@@ -32,7 +32,7 @@
             <div class="col-auto">
                 <h5 class="card-title">Cost:</h5>
             </div>
-            <div class="col-10 ms-auto">
+            <div class="col ms-auto">
                 <div>
                     <input type="number" name="flightCost" [(ngModel)]="flightCost" class="form-control"
                         id="formControlFlightCost" placeholder="5000">
@@ -40,13 +40,17 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center mt-3">
-            <div class="col-3">
+            <div class="col-auto">
                 <button class="btn btn-primary" (click)="onClickAddFlight()">Add Flight Schedule</button>
             </div>
         </div>
-        <div class="row mt-5">
+    </div>
+</div>
+<div class="card overflow-auto mb-5">
+    <div class="card-body m-3 mb-2">
+        <div class="row">
             <div class="col">
-                <h5>List of Flights</h5>
+                <h5><strong>List of Flights</strong></h5>
             </div>
         </div>
         <div class="row">
