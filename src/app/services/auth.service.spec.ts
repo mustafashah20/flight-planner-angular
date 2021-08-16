@@ -4,9 +4,14 @@ import { AuthService } from './auth.service';
 
 describe('AuthService', () => {
   let service: AuthService;
+  let authStub: any;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [
+        { provide: AuthService, useValue: { authStub } },
+      ]
+    });
     service = TestBed.inject(AuthService);
   });
 

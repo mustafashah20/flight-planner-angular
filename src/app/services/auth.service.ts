@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
@@ -67,10 +67,10 @@ export class AuthService {
 
   private getUserData(user) {
     this.angularFirestore.doc(`users/${user.uid}`).valueChanges().subscribe((data: any) => {
-      if(data.role === "admin"){
+      if (data.role === "admin") {
         this.router.navigate(['admin-home'])
       }
-      else{
+      else {
         this.router.navigate(['traveler-home'])
       }
     })

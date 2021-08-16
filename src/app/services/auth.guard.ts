@@ -3,7 +3,6 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTr
 import { Observable } from 'rxjs';
 
 import { AngularFireAuth } from '@angular/fire/auth';
-import { reject, resolve } from 'protractor/node_modules/@types/q';
 
 @Injectable({
   providedIn: 'root'

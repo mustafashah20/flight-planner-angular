@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +9,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { MatDialogModule } from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
@@ -21,16 +22,6 @@ import { FlightPlanComponent } from './components/flight-plan/flight-plan.compon
 import { SignupComponent } from './components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupEditFlightComponent } from './components/popup-edit-flight/popup-edit-flight.component';
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDYk7jj_XjWgkBZ6FSq3EuV9EiaQxBLMIA",
-  authDomain: "flightplanner-1e6a4.firebaseapp.com",
-  projectId: "flightplanner-1e6a4",
-  storageBucket: "flightplanner-1e6a4.appspot.com",
-  messagingSenderId: "237648352796",
-  appId: "1:237648352796:web:e3c984e993fb0caa27f1d9"
-};
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,12 +41,12 @@ const firebaseConfig = {
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireStorageModule,
     AngularFirestoreModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
