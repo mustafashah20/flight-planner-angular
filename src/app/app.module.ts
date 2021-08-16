@@ -22,6 +22,17 @@ import { FlightPlanComponent } from './components/flight-plan/flight-plan.compon
 import { SignupComponent } from './components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupEditFlightComponent } from './components/popup-edit-flight/popup-edit-flight.component';
+
+
+const firebase = {
+  apiKey: "AIzaSyDYk7jj_XjWgkBZ6FSq3EuV9EiaQxBLMIA",
+  authDomain: "flightplanner-1e6a4.firebaseapp.com",
+  projectId: "flightplanner-1e6a4",
+  storageBucket: "flightplanner-1e6a4.appspot.com",
+  messagingSenderId: "237648352796",
+  appId: "1:237648352796:web:e3c984e993fb0caa27f1d9"
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +52,7 @@ import { PopupEditFlightComponent } from './components/popup-edit-flight/popup-e
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(firebase),
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
