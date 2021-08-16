@@ -70,7 +70,7 @@ export class AuthService {
       if (data.role === "admin") {
         this.router.navigate(['admin-home'])
       }
-      else {
+      else if (data.role === "traveler") {
         this.router.navigate(['traveler-home'])
       }
     })

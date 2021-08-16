@@ -75,7 +75,6 @@ export class AddFlightsComponent implements OnInit {
       }
     }).afterClosed().subscribe((res: Flight) => {
       const index = this.flights.findIndex(item => item._id === res._id);
-      console.log(index)
       this.flights.splice(index, 1, res);
     })
   }
